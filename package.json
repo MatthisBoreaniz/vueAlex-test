@@ -1,5 +1,5 @@
 {
-  "name": "testvuealex",
+  "name": "vue-project",
   "version": "0.0.0",
   "private": true,
   "type": "module",
@@ -12,9 +12,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
-    "lint:eslint": "eslint . --fix --cache",
-    "lint": "run-s lint:*",
+    "lint": "eslint . --fix --cache",
     "format": "prettier --write src/"
   },
   "dependencies": {
@@ -22,7 +20,6 @@
     "vue-router": "^4.6.3"
   },
   "devDependencies": {
-    "@prettier/plugin-oxc": "^0.0.4",
     "@tsconfig/node22": "^22.0.2",
     "@types/node": "^22.18.11",
     "@vitejs/plugin-vue": "^6.0.1",
@@ -30,11 +27,9 @@
     "@vue/eslint-config-typescript": "^14.6.0",
     "@vue/tsconfig": "^0.8.1",
     "eslint": "^9.37.0",
-    "eslint-plugin-oxlint": "~1.23.0",
     "eslint-plugin-vue": "~10.5.0",
     "jiti": "^2.6.1",
     "npm-run-all2": "^8.0.4",
-    "oxlint": "~1.23.0",
     "prettier": "3.6.2",
     "sass-embedded": "^1.93.3",
     "typescript": "~5.9.0",

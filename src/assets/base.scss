@@ -1,16 +1,4 @@
-/* color palette from <https://github.com/vuejs/theme> */
-/* semantic color variables for this project */
-:root {
-  --color-background: (#fff);
-  --color-text: (#000);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: (#000);
-    --color-text: (#fff);
-  }
-}
+@use './foundations/css-variables' as *;
 
 *,
 *::before,
@@ -45,4 +33,8 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
 }

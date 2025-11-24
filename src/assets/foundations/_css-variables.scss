@@ -1,0 +1,16 @@
+@use './functions' as *;
+
+:root {
+  --color-background: #fff;
+  --color-text: #000;
+  --color-primary: green;
+
+  --font-size-base: #{rem(14)};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #000;
+    --color-text: #fff;
+  }
+}

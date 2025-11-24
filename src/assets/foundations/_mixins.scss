@@ -1,0 +1,38 @@
+@use 'variables.scss' as *;
+@use 'functions.scss' as *;
+
+@mixin title {
+  font-size: rem(40);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+@mixin small-only {
+  @media (max-width: $small-breakpoint) {
+    @content;
+  }
+}
+
+@mixin medium-up {
+  @media (min-width: $medium-breakpoint) {
+    @content;
+  }
+}
+
+@mixin medium-down {
+  @media (max-width: $medium-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin large-up {
+  @media (min-width: $large-breakpoint) {
+    @content;
+  }
+}
+
+@mixin large-down {
+  @media (max-width: $large-breakpoint - 1px) {
+    @content;
+  }
+}
