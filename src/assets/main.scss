@@ -1,1 +1,154 @@
 @use './base.scss' as *;
+
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $btn-icon-gap;
+
+  border: none;
+  border-radius: $btn-radius;
+  cursor: pointer;
+
+  padding: $btn-padding-medium;
+  font-size: $btn-font-size-medium;
+
+  background-color: $btn-bg-default;
+  color: $btn-text-default;
+
+  transition: 0.15s;
+
+  span {
+    padding: $btn-padding-span;
+  }
+
+  &:hover {
+    background-color: $btn-bg-hover;
+  }
+
+  &:focus {
+    outline: none;
+    background-color: $btn-bg-focus;
+    box-shadow: $btn-focus-shadow;
+  }
+
+  &:active {
+    background-color: $btn-bg-pressed;
+  }
+
+  &:disabled {
+    background-color: $btn-bg-disabled;
+    color: $btn-text-disabled;
+    cursor: not-allowed;
+  }
+
+  &.-giant {
+    font-size: $btn-font-size-giant;
+    padding: $btn-padding-giant;
+  }
+
+  &.-large {
+    font-size: $btn-font-size-large;
+    padding: $btn-padding-large;
+  }
+
+  &.-medium {
+    font-size: $btn-font-size-medium;
+    padding: $btn-padding-medium;
+  }
+
+  &.-small {
+    font-size: $btn-font-size-small;
+    padding: $btn-padding-small;
+  }
+
+  &.-tiny {
+    font-size: $btn-font-size-tiny;
+    padding: $btn-padding-tiny;
+  }
+
+  &.-icon {
+    padding: 0;
+    border-radius: 25%;
+    width: $btn-size-medium;
+    height: $btn-size-medium;
+
+    span {
+      padding: 0;
+    }
+
+    &.-giant {
+      width: $btn-size-giant;
+      height: $btn-size-giant;
+    }
+
+    &.-large {
+      width: $btn-size-large;
+      height: $btn-size-large;
+    }
+
+    &.-medium {
+      width: $btn-size-medium;
+      height: $btn-size-medium;
+    }
+
+    &.-small {
+      width: $btn-size-small;
+      height: $btn-size-small;
+    }
+
+    &.-tiny {
+      width: $btn-size-tiny;
+      height: $btn-size-tiny;
+    }
+  }
+
+  &.-outline {
+    background-color: transparent;
+    color: $btn-outline-color;
+    border: rem(1) solid $btn-outline-color;
+
+    &:hover {
+      background-color: rgba($btn-outline-color, 0.08);
+    }
+
+    &:focus {
+      box-shadow: $btn-focus-shadow;
+      background-color: rgba($btn-outline-color, 0.12);
+    }
+
+    &:active {
+      background-color: rgba($btn-outline-color, 0.16);
+    }
+
+    &:disabled {
+      color: $btn-text-disabled;
+      border-color: $btn-text-disabled;
+      background-color: transparent;
+    }
+  }
+
+  &.-ghost {
+    background-color: transparent;
+    color: $btn-bg-default;
+
+    &:hover {
+      background-color: rgba($btn-bg-default, 0.06);
+    }
+
+    &:focus {
+      box-shadow: $btn-focus-shadow;
+      background-color: rgba($btn-bg-default, 0.10);
+    }
+
+    &:active {
+      background-color: rgba($btn-bg-default, 0.14);
+    }
+
+    &:disabled {
+      color: $btn-text-disabled;
+      background-color: transparent;
+    }
+  }
+}
