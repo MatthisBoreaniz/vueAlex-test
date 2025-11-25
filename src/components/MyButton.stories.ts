@@ -11,7 +11,14 @@ const meta = {
     setup() {
       return { args }
     },
-    template: '<MyButton v-bind="args">Click me</MyButton>',
+    template: `
+    <MyButton v-bind="args">
+      <template v-if="args.icon">
+        ←
+      </template>
+      <template v-else>Click me</template>
+    </MyButton>
+  `,
   }),
   tags: ['autodocs'],
   argTypes: {
