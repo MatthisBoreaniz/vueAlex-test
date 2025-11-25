@@ -2,14 +2,25 @@
 defineProps<{
   href?: string
   variant?: 'default' | 'outline'
+  size?: 'default' | 'small'
 }>()
 </script>
 
 <template>
-  <a v-if="href" class="button" :class="{ outline: variant === 'outline' }" href=""
+  <a
+    v-if="href"
+    class="button"
+    :class="{ '-outline': variant === 'outline', '-small': size === 'small' }"
+    href=""
     ><slot></slot
   ></a>
-  <button v-else class="button"><slot></slot></button>
+  <button
+    v-else
+    class="button"
+    :class="{ '-outline': variant === 'outline', '-small': size === 'small' }"
+  >
+    <slot></slot>
+  </button>
 </template>
 
 <style lang="scss">
@@ -28,7 +39,10 @@ defineProps<{
     --button-color: var(--color-primary);
     --button-bg-color: transparent;
   }
-&.outline {
+  &.-small {
+    padding: rem(5) rem(10);
+  }
+  &.-outline {
     --button-color: var(--color-primary);
     --button-bg-color: transparent;
     &:hover {
