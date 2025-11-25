@@ -4,3 +4,41 @@ $small-breakpoint: 360px;
 $medium-breakpoint: 768px;
 $large-breakpoint: 1024px;
 $column-number: 12;
+
+
+$btn-bg-default: #4E61F6;
+$btn-bg-hover: #3745AF;
+$btn-bg-focus: #4E61F6;
+$btn-bg-pressed: #2B3587;
+$btn-bg-disabled: #E5E7EA;
+
+$btn-text-default: #ffffff;
+$btn-text-disabled: #9EA2AE;
+
+$btn-outline-color: $btn-bg-default;
+
+$btn-border-focus: #a5b4fc;
+$btn-focus-shadow: 0 0 0 rem(3) rgba(165, 180, 252, 0.6);
+
+$btn-font-size-giant: rem(18);
+$btn-font-size-large: rem(16);
+$btn-font-size-medium: rem(14);
+$btn-font-size-small: rem(12);
+$btn-font-size-tiny: rem(10);
+
+$btn-padding-giant: rem(16) rem(24);
+$btn-padding-large: rem(14) rem(20);
+$btn-padding-medium: rem(12) rem(16);
+$btn-padding-small: rem(8) rem(12);
+$btn-padding-tiny: rem(6) rem(8);
+
+$btn-padding-span: 0 rem(8);
+$btn-icon-gap: rem(8);
+
+$btn-size-giant: rem(48);
+$btn-size-large: rem(44);
+$btn-size-medium: rem(40);
+$btn-size-small: rem(32);
+$btn-size-tiny: rem(24);
+
+$btn-radius: rem(8);
